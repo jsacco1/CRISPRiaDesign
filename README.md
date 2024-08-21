@@ -1,8 +1,14 @@
 # CRISPRiaDesign
 
-Updated for Python 3. Some data files are missing because the Box account is no longer accessible. I hope to submit a pull request to davidliwei/awesome-CRISPR, once I get at least one of the Jupyter notebooks to run. The goal of this notebook is to integrate multi-omics datasets (DNA, chromatin) to **identify transcription start sites** for targeting in CRISPRi/a screens.  
+Updated for Python 3. Some data files are missing because the Box account is no longer accessible. I hope to submit a pull request to davidliwei/awesome-CRISPR, once I get at least one of the Jupyter notebooks to run. The goal of this notebook is to integrate multi-omics datasets (DNA, chromatin) to **identify transcription start sites** (TSSs) for targeting in CRISPRi/a screens. 
 
-## Original README:
+As Horlbeck et al. used a cannonical list of TSSs, some of the guides in their v2 libraries target TSSs not supported by sequencing datasets in their cell lines of interest (e.g., K562: a chronic myelogenous leukemia cell line derived from bone marrow).
+
+This file is offered as-is, without warranty of any kind.
+
+### TODO:
+Determine ViennaRNA version at Sep 19, 2016 (commit faa3824 at https://github.com/mhorlbeck/CRISPRiaDesign)
+Determine versions of Scipy/Numpy/Pandas, Biopython, bxpython, Pysam, and Scikit-learn to refactor from, given above date. 
 
 This site hosts the sgRNA machine learning scripts used to generate the Weissman lab's next-generation CRISPRi and CRISPRa library designs [(Horlbeck et al., eLife 2016)](https://elifesciences.org/content/5/e19760). These are currently implemented as interactive scripts along with iPython notebooks with step-by-step instructions for creating new sgRNA libraries. Future plans include adding command line functions to make library design more user-friendly. Note that all sgRNA designs for CRISPRi/a human/mouse protein-coding gene libraries are included as supplementary tables in the eLife paper, so cloning of individual sgRNAs or construction of any custom sublibraries targeting protein-coding genes can simply refer to those tables. These scripts are primarily useful for the design of sgRNAs targeting novel or non-coding genes, or for organisms beyond human and mouse.
 
@@ -21,7 +27,7 @@ To see full example code for de novo machine learning, prediction of sgRNA activ
 * [ScreenProcessing](https://github.com/mhorlbeck/ScreenProcessing)
 
 External command line applications required:
-* ViennaRNA
+* ViennaRNA (version 2)
 * Bowtie (not Bowtie2)
 
 Large genomic data files required:
