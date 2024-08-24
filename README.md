@@ -4,7 +4,7 @@ Updated for Python 3. Some data files are missing because the Box account is no 
 
 As Horlbeck et al. used a cannonical list of TSSs, some of the guides in their v2 libraries target TSSs not supported by sequencing datasets in their cell lines of interest (e.g., K562: a chronic myelogenous leukemia cell line derived from bone marrow).
 
-This file is offered as-is, without warranty of any kind.
+This repo is offered as-is, without warranty of any kind.
 
 ### TODO:
 Determine ViennaRNA version at Sep 19, 2016 (commit faa3824 at https://github.com/mhorlbeck/CRISPRiaDesign)
