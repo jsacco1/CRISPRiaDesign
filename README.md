@@ -6,6 +6,17 @@ As Horlbeck et al. used a cannonical list of TSSs, some of the guides in their v
 
 This repo is offered as-is, without warranty of any kind.
 
+### Download Data
+
+Reference data
+
+Download hg38 peaks from FANTOM5.
+
+```bash
+curl -L -O "https://fantom.gsc.riken.jp/5/datafiles/reprocessed/hg38_latest/extra/CAGE_peaks_expression/hg38_fair+new_CAGE_peaks_phase1and2_tpm_ann.osc.txt.gz"
+```
+
+
 ### TODO:
 Determine ViennaRNA version at Sep 19, 2016 (commit faa3824 at https://github.com/mhorlbeck/CRISPRiaDesign)
 Determine versions of Scipy/Numpy/Pandas, Biopython, bxpython, Pysam, and Scikit-learn to refactor from, given above date. 
