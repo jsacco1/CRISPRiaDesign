@@ -5,6 +5,12 @@
 conda activate library
 pip install vienna
 
+# Test if Vienna works
+# in python 3:
+# import vienna
+# fr = vienna.fold('GCACGACGCGAAAGGGTTTAAAGC')
+# print(fr)
+
 # IF INSTALLING FROM SOURCE
 # wget https://www.tbi.univie.ac.at/RNA/download/sourcecode/2_6_x/ViennaRNA-2.6.4.tar.gz
 
