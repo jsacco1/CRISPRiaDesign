@@ -1,7 +1,11 @@
 # install Vienna
 
-conda config --add channels defaults
-conda config --add channels bioconda
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-conda install viennarna=2.2.5
+wget https://www.tbi.univie.ac.at/RNA/download/sourcecode/2_2_x/ViennaRNA-2.2.5.tar.gz
+tar -zxvf ViennaRNA-2.2.5.tar.gz
+cd ViennaRNA-2.2.5
+
+./configure --prefix="/Users/jamessacco/dev/CRISPRiaDesign/ViennaRNA-2.2.5"
+make
+make install
+export PATH="/Users/jamessacco/dev/CRISPRiaDesign/ViennaRNA-2.2.5:$PATH"
+RNAfold --version
