@@ -7,7 +7,8 @@ tar -zxvf ViennaRNA-2.2.5.tar.gz
 cd ViennaRNA-2.2.5
 
 ./configure --prefix="/Users/jamessacco/dev/CRISPRiaDesign/ViennaRNA-2.2.5"
+./configure --disable-openmp
 make
 make install
-export PATH="/Users/jamessacco/dev/CRISPRiaDesign/ViennaRNA-2.2.5:$PATH"
-RNAfold --version
+#export PATH="/Users/jamessacco/dev/CRISPRiaDesign/ViennaRNA-2.2.5/bin:$PATH"
+#RNAfold --version

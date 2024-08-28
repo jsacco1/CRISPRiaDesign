@@ -16,9 +16,17 @@ Download hg38 peaks from FANTOM5.
 curl -L -O "https://fantom.gsc.riken.jp/5/datafiles/reprocessed/hg38_latest/extra/CAGE_peaks_expression/hg38_fair+new_CAGE_peaks_phase1and2_tpm_ann.osc.txt.gz"
 ```
 
+### Install dependencies
+
+```bash
+conda install viennarna
+```
+
+Reference: 
+
+https://viennarna.readthedocs.io/en/latest/install.html#using-conda
 
 ### TODO:
-Determine ViennaRNA version at Sep 19, 2016 (commit faa3824 at https://github.com/mhorlbeck/CRISPRiaDesign)
 Determine versions of Scipy/Numpy/Pandas, Biopython, bxpython, Pysam, and Scikit-learn to refactor from, given above date. 
 
 This site hosts the sgRNA machine learning scripts used to generate the Weissman lab's next-generation CRISPRi and CRISPRa library designs [(Horlbeck et al., eLife 2016)](https://elifesciences.org/content/5/e19760). These are currently implemented as interactive scripts along with iPython notebooks with step-by-step instructions for creating new sgRNA libraries. Future plans include adding command line functions to make library design more user-friendly. Note that all sgRNA designs for CRISPRi/a human/mouse protein-coding gene libraries are included as supplementary tables in the eLife paper, so cloning of individual sgRNAs or construction of any custom sublibraries targeting protein-coding genes can simply refer to those tables. These scripts are primarily useful for the design of sgRNAs targeting novel or non-coding genes, or for organisms beyond human and mouse.
@@ -38,7 +46,7 @@ To see full example code for de novo machine learning, prediction of sgRNA activ
 * [ScreenProcessing](https://github.com/mhorlbeck/ScreenProcessing)
 
 External command line applications required:
-* ViennaRNA (version 2)
+* ViennaRNA (version 2.2.5)
 * Bowtie (not Bowtie2)
 
 Large genomic data files required:
