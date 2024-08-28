@@ -1,6 +1,8 @@
 # install Vienna
+# Accessed 8/27/24
 
-wget https://www.tbi.univie.ac.at/RNA/download/sourcecode/2_2_x/ViennaRNA-2.2.5.tar.gz
+
+wget https://www.tbi.univie.ac.at/RNA/download/sourcecode/2_2_x/ViennaRNA-2.2.5.tar.gz 
 tar -zxvf ViennaRNA-2.2.5.tar.gz
 cd ViennaRNA-2.2.5
 
