@@ -6,13 +6,24 @@ import multiprocessing
 import numpy as np 
 import scipy as sp 
 import pandas as pd
-from ConfigParser import SafeConfigParser
+
+# refactored to Python 3.10
+import configparser
 from Bio import Seq, SeqIO
 import pysam
 from bx.bbi.bigwig_file import BigWigFile
-from sklearn import linear_model, svm, ensemble, preprocessing, grid_search, metrics
+from sklearn import linear_model, svm, ensemble, preprocessing, metrics
+from sklearn.model_selection import GridSearchCV
 
-from expt_config_parser import parseExptConfig, parseLibraryConfig
+#from expt_config_parser import parseExptConfig, parseLibraryConfig
+
+
+# from ConfigParser import SafeConfigParser
+# from Bio import Seq, SeqIO
+# import pysamdfsdfsdf
+# from bx.bbi.bigwig_file import BigWigFile
+# from sklearn import linear_model, svm, ensemble, preprocessing, grid_search, metrics
+# from expt_config_parser import parseExptConfig, parseLibraryConfig
 
 ###############################################################################
 #                   Import and Merge Training/Test Data                       #

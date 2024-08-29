@@ -32,7 +32,17 @@ Reference:
 https://viennarna.readthedocs.io/en/latest/install.html#using-conda
 
 ### TODO:
-Determine versions of Scipy/Numpy/Pandas, Biopython, bxpython, Pysam, and Scikit-learn to refactor from, given above date. 
+
+1. Get FASTA and GTF fro sgRNA_learning.py
+
+genomeDict = loadGenomeAsDict(FASTA_FILE_OF_GENOME)
+gencodeData = loadGencodeData(GTF_FILE_FROM_GENCODE)
+
+2. Run sgRNA_learning.py to see if expt_config_parser can be commented out, or need to find python 3 version
+
+```Python
+from expt_config_parser import parseExptConfig, parseLibraryConfig
+```
 
 This site hosts the sgRNA machine learning scripts used to generate the Weissman lab's next-generation CRISPRi and CRISPRa library designs [(Horlbeck et al., eLife 2016)](https://elifesciences.org/content/5/e19760). These are currently implemented as interactive scripts along with iPython notebooks with step-by-step instructions for creating new sgRNA libraries. Future plans include adding command line functions to make library design more user-friendly. Note that all sgRNA designs for CRISPRi/a human/mouse protein-coding gene libraries are included as supplementary tables in the eLife paper, so cloning of individual sgRNAs or construction of any custom sublibraries targeting protein-coding genes can simply refer to those tables. These scripts are primarily useful for the design of sgRNAs targeting novel or non-coding genes, or for organisms beyond human and mouse.
 
