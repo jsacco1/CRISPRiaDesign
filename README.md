@@ -18,11 +18,16 @@ curl -L -O "https://fantom.gsc.riken.jp/5/datafiles/reprocessed/hg38_latest/extr
 
 ### Install dependencies
 
+Dependencies can be installed from requirements.txt
+
+To install the most current Vienna RNA paackge into the environment:
+
 ```bash
-conda install viennarna
+conda activate library
+pip install vienna
 ```
 
-Reference: 
+Reference:
 
 https://viennarna.readthedocs.io/en/latest/install.html#using-conda
 
