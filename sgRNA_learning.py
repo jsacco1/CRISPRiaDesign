@@ -7,7 +7,7 @@ import numpy as np
 import scipy as sp 
 import pandas as pd
 
-# refactored to Python 3.10
+# refactored to Python
 import configparser
 from Bio import Seq, SeqIO
 import pysam
@@ -15,7 +15,7 @@ from bx.bbi.bigwig_file import BigWigFile
 from sklearn import linear_model, svm, ensemble, preprocessing, metrics
 from sklearn.model_selection import GridSearchCV
 
-#from expt_config_parser import parseExptConfig, parseLibraryConfig
+from expt_config_parser import parseExptConfig, parseLibraryConfig
 
 
 # from ConfigParser import SafeConfigParser
@@ -35,7 +35,7 @@ def loadExperimentData(experimentFile, supportedLibraryPath, library, basePath =
 	phenotypeTableDict = dict()
 	libraryTableDict = dict()
 
-	parser = SafeConfigParser()
+	parser = configparser() #SageConfigParser used in Python 2
 	parser.read(experimentFile)
 	for exptConfigFile in parser.sections():
 		configDict = parseExptConfig(exptConfigFile,libDict)[0]
@@ -727,7 +727,7 @@ def fitParams(paramTable, scoreTable, fitTable):
 			parameters = fitRow['params'] 
 			
 			svr = svm.SVR(cache_size=500)
-			clf = grid_search.GridSearchCV(svr, parameters, n_jobs=16, verbose=0)
+			clf = GridSearchCV(svr, parameters, n_jobs=16, verbose=0)
 			clf.fit(col_reshape, scoreTable)
 
 			print(name, clf.best_params_)
